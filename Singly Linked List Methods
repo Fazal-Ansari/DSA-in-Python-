@@ -1,0 +1,116 @@
+                                               # Singly Linked List All Methods :
+# Fazal Ansari NKOCET
+class node:
+    def __init__(self,data): 
+        self.data=data 
+        self.next=None
+        
+class singlylist:  
+    
+    def __init__(self):
+        self.head=None
+        
+    def insert_at_begining(self,nn): # insert at start
+        nn=node(nn)
+        nn.next=self.head
+        self.head=nn   
+        
+    def insert_at_end(self,nn): # insert at end
+        nn=node(nn)
+        temp=self.head
+        while(temp.next!=None):
+            temp=temp.next
+        temp.next=nn
+        
+    def delete_at_start(self): # delete at start
+        if self.head==None:
+            print("List is empty")
+        else:
+            temp=self.head
+            self.head=temp.next
+            temp=None
+    
+    def search_node(self,s):
+        temp=self.head
+        found=0
+        
+        if (temp==None):
+            print("List is empty")
+            
+        else:
+            while(temp!=None):
+                if(temp.data==s):
+                    found+=1
+                    break
+                temp=temp.next
+                         
+        if (found==1):
+            print("=)",s," Found")
+        else:
+            print("=)",s," Not Found")
+            
+# Fazal Ansari NKOCET
+                            
+    def display(self): # print all nodes
+        temp=self.head
+        while(temp!=None):
+            print(temp.data)
+            temp=temp.next
+            
+# Object Passing         
+sl=singlylist()
+first=node(10)
+second=node(20)
+third=node(30)
+
+sl.head=first
+first.next=second
+second.next=third
+
+                             # Calling Functions :
+
+    
+# print Original List
+print("Original List: ")
+print("___________________________")
+sl.display()
+print("___________________________")
+
+
+# Insert new node at begining
+n=int(input("Number of nodes to be added at start:"))
+for i in range(0,n):
+    new=input("Enter new node:")
+    sl.insert_at_begining(-10)
+print("___________________________")
+
+
+# Insert New node at End:
+n=int(input("Number of nodes to be added at end:"))
+for i in range(0,n):
+    new=input("Enter new node:")
+    sl.insert_at_end(new)
+print("___________________________")
+  
+    
+# Delete Node at Start:
+n=int(input("Number of nodes to be deleted at Start:"))
+for i in range(0,n):
+    sl.delete_at_start()
+print("___________________________")
+
+
+# Searching a node:
+n=int(input("Number of nodes to be Searched :"))
+for i in range(0,n):
+    s=int(input("Enter data to be searched: "))
+    sl.search_node(s)
+print("___________________________")
+
+
+
+# Print All Nodes
+print("Nodes Right now in Singly List are : ")
+sl.display()
+
+# Fazal Ansari NKOCET
