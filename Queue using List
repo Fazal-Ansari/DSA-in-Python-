@@ -1,0 +1,50 @@
+                                    # Queue using List & function
+# line =) Name of the queue 
+class Queue: 
+#Fazal Ansari    
+    def __init__(self): #  by defaultly called
+        self.line=[]
+        
+    def peek(self): # shows very 1st member
+        
+        try:
+           # print("Current member at the start: ")
+            return self.line[0] 
+        except:
+            print("Queue is Empty no member to peek")
+        else:
+            print("Current member at the start: ")
+            return self.line[0] 
+#Fazal Ansari            
+    def enqueue(self):   # adds member at end                  
+        new=input("Enter new member: ") 
+        self.line.append(new)
+        
+    def dequeue(self): # removes member from beginning
+        try:
+            self.line.pop(0)
+        except:
+            print("Already Queue is empty no member to remove")
+        else: 
+            return self.line.pop(0)
+        
+    def is_empty(self): # checks is list is empty
+        
+        print("Is Queue empty: ")
+        return not self.line
+    
+    def length_queue(self):  # shows length of queue
+        print("Length of Queue: ")
+        return len(self.line)
+
+# various methods enqueue,dequeue,peek,is_empty,length_queue
+q=Queue()
+q.peek()
+
+# run other functions:
+ 
+#q.peek()
+#q.dequeue()
+#q.is_empty()
+#q.length_queue
+#Fazal Ansari
