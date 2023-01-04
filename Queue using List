@@ -46,5 +46,5 @@ q.peek()
 #q.peek()
 #q.dequeue()
 #q.is_empty()
-#q.length_queue
+#q.length_queue()
 #Fazal Ansari
